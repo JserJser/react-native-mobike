@@ -8,6 +8,7 @@ import {StackNavigator} from "react-navigation";
 import WelcomScreen from "./pages/WelcomScreen";
 import MainScreen from "./pages/MainScreen";
 import NotifyScreen from "./pages/NotifyScreen";
+import QRScannerScreen from "./pages/QRScannerScreen";
 export const AppNavigator = StackNavigator(
     {
         Welcome:{
@@ -18,6 +19,9 @@ export const AppNavigator = StackNavigator(
         },
         Notification: {
             screen: NotifyScreen,
+        },
+        Scanner:{
+            screen:QRScannerScreen
         },
 
     }, {

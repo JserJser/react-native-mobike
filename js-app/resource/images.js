@@ -14,6 +14,8 @@ export const images = {
     ic_title_bar_menu:require('./imgs/ic_menu.png'),
     ic_title_bar_more:require('./imgs/ic_more.png'),
     ic_title_bar_notification:require('./imgs/ic_notification.png'),
+    ic_title_cancel:require('./imgs/ic_title_cancel.png'),
+    ic_title_help:require('./imgs/ic_title_help.png'),
 
     /**
      * 侧边屏幕 上的图标
@@ -49,4 +51,13 @@ export const images = {
 
     ic_home_bg_camera : require('./imgs/ic_bg_camera.png'),
     ic_home_camera : require('./imgs/ic_camera.png'),
+
+
+    /**
+     * 扫码页面
+     */
+    ic_scan_bar:require('./imgs/ic_scan_bar.png'),
+    ic_scan_bar_light:require('./imgs/ic_scan_qrcode_flash_light_off.png'),
+    ic_scan_bar_input:require('./imgs/ic_qrcode_input_button.png'),
+    ic_scan_bluetooh:require('./imgs/ic_scan_bluetooh.png'),
 };
