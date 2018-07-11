@@ -60,4 +60,10 @@ export const images = {
     ic_scan_bar_light:require('./imgs/ic_scan_qrcode_flash_light_off.png'),
     ic_scan_bar_input:require('./imgs/ic_qrcode_input_button.png'),
     ic_scan_bluetooh:require('./imgs/ic_scan_bluetooh.png'),
+
+    /**
+     * 列表页
+     */
+
+    ic_list_item_bg:require('./imgs/ic_list_item.png'),
 };

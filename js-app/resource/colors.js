@@ -16,4 +16,14 @@ export const colors = {
     black_0000004D:'#0000004D',
     black_232323:'#232323',
     transparent:'#00000000',
+
+    white:'#ffffff',
+    black:'#000000',
+    blue:'#0000FF',
+    red:'#FF0000',
+    gray:'#BEBEBE',
+    gray_66:'#B9BBBE',
+    bg:'#EDEDED',
+    reduxBg:'#F5FCFF',
+    reduxTextcolor:'#575757',
 };

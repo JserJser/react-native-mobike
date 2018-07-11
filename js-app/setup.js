@@ -7,8 +7,21 @@ import {StackNavigator} from "react-navigation";
 
 import WelcomScreen from "./pages/WelcomScreen";
 import MainScreen from "./pages/MainScreen";
-import NotifyScreen from "./pages/NotifyScreen";
+import FlatlistScreen from "./pages/FlatlistScreen";
 import QRScannerScreen from "./pages/QRScannerScreen";
+import CardStackStyleInterpolator from 'react-navigation/src/views/CardStack/CardStackStyleInterpolator';
+
+const TransitionConfiguration = () => ({
+    screenInterpolator: (sceneProps) => {
+        const {scene} = sceneProps;
+        const {route} = scene;
+        const params = route.params || {};
+        const transition = params.transition || 'forHorizontal';
+        return CardStackStyleInterpolator[transition](sceneProps);
+    },
+});
+
+
 export const AppNavigator = StackNavigator(
     {
         Welcome:{
@@ -18,15 +31,17 @@ export const AppNavigator = StackNavigator(
             screen: MainScreen,
         },
         Notification: {
-            screen: NotifyScreen,
+            screen: FlatlistScreen,
         },
         Scanner:{
             screen:QRScannerScreen
         },
 
+
     }, {
         initialRouteName: 'Welcome', // 默认显示界面
         headerMode: 'none',//导航栏的显示模式-隐藏导航栏
-        mode:'card',//页面切换模式-普通app常用的左右切换
+        transitionConfig: TransitionConfiguration,
+        mode: 'card',//页面切换模式-普通app常用的左右切换
     },
 );

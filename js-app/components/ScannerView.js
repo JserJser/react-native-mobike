@@ -14,7 +14,7 @@ export default class ScannerView extends Component {
         return (
             <TouchableOpacity style={this.props.style} onPress={this.props.onPress}>
                 <View style={styles.container}>
-                    <Image style={styles.imgBg} source={images.ic_home_bg_camera}/>
+                    <View style={styles.imgBg}/>
                     <View style={styles.viewContainer}>
                         <Image style={styles.imgBt} source={images.ic_home_camera}/>
                         <Text style={styles.text}>扫码骑车</Text>
@@ -29,16 +29,23 @@ export default class ScannerView extends Component {
 var Dimensions = require('Dimensions');
 var mWidth = Dimensions.get('window').width;
 const styles = StyleSheet.create({
-    container:{flex:1},
-    imgBg: {width: mWidth / 3, height: 60},
+    container: {flex: 1},
+    imgBg: {
+        width: mWidth / 3,
+        height: 50,
+        backgroundColor:colors.black_232323,
+        borderWidth:1,
+        borderColor:colors.black_232323,
+        borderRadius:8,
+    },
     viewContainer: {
         width: mWidth / 3,
-        height: 60,
+        height: 50,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         position: 'absolute'
     },
-    text: {fontSize: 16, color: colors.white_fff, marginLeft: 10,},
-    imgBt: {width: 30, height: 30},
+    text: {fontSize: 14, color: colors.white_fff, marginLeft: 8,},
+    imgBt: {width: 20, height: 20},
 });
