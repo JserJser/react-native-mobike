@@ -3,8 +3,11 @@
  * Function:
  * Desc:
  */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import Camera from 'react-native-camera';
+import PropTypes from '../../node_modules/prop-types/';
+
+
 import
 {
     ActivityIndicator,
@@ -358,7 +361,7 @@ class QRScannerRectView extends Component {
  */
 export default class QRScannerView extends Component {
 
-    /*static propTypes = {
+    static propTypes = {
         maskColor: PropTypes.string,
         borderColor: PropTypes.string,
         cornerColor: PropTypes.string,
@@ -383,7 +386,7 @@ export default class QRScannerView extends Component {
         renderTopBarView:PropTypes.func,
         renderBottomMenuView:PropTypes.func,
         isShowScanBar:PropTypes.bool,
-    };*/
+    };
     constructor(props) {
         super(props);
         //通过这句代码屏蔽 YellowBox

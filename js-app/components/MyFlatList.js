@@ -64,6 +64,7 @@ export default class MyFlatList extends Component {
      */
     render() {
         return (<View style={{flex: 1, backgroundColor: colors.bg}}>
+            <Toast ref = 'toast'/>
             <FlatList
                 ref={(flatlist) => this.flatlist = flatlist}
                 ListHeaderComponent={this._header}
@@ -80,7 +81,6 @@ export default class MyFlatList extends Component {
                     length: 250, offset: (250 + 10) * index, index
                 })}
             />
-            <Toast ref = 'toast'/>
         </View>);
     }
 }
